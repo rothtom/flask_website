@@ -2,10 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Weather in {{ current_data.name if current_data.cod == 200 else "Weather App" }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='weather.css') }}">
 </head>
-<body>
-    <h1>The weather at PLZ: {{ plz }}</h1>
+
+{% if current_data.cod == 200 %}
+    {% set weather_type = current_data.weather[0].main.lower() %}
+{% else %}
+    {% set weather_type = "default" %}
+{% endif %}
+
+<body class="{{ weather_type }}">
+
+    {% if current_data.cod == 200 %}
+
+        <div class="card">
+            <h1>{{ current_data.name }}</h1>
+            <div class="country">{{ current_data.sys.country }}</div>
+
+            <img src="https://openweathermap.org/img/wn/{{ current_data.weather[0].icon }}@2x.png"
+                alt="Weather icon">
+
+            <div class="temp">
+                {{ current_data.main.temp | round(1) }}°C
+            </div>
+
+            <div class="description">
+                {{ current_data.weather[0].description }}
+            </div>
+
+            <div class="details">
+                <p><strong>Feels like:</strong> {{ current_data.main.feels_like | round(1) }}°C</p>
+                <p><strong>Humidity:</strong> {{ current_data.main.humidity }}%</p>
+                <p><strong>Pressure:</strong> {{ current_data.main.pressure }} hPa</p>
+                <p><strong>Wind:</strong> {{ current_data.wind.speed }} m/s</p>
+                <p><strong>Cloudiness:</strong> {{ current_data.clouds.all }}%</p>
+
+                {% if current_data.rain %}
+                    <p><strong>Rain (1h):</strong> {{ current_data.rain['1h'] }} mm</p>
+                {% endif %}
+
+                <hr>
+
+                <p><strong>Local Time:</strong> {{ current_data.local_time }}</p>
+                <p><strong>Sunrise:</strong> {{ current_data.sunrise_time }}</p>
+                <p><strong>Sunset:</strong> {{ current_data.sunset_time }}</p>                
+            </div>
+        </div>
+
+    {% else %}
+        <div class="card">
+            <p class="error">Error: {{ current_data.message }}</p>
+        </div>
+    {% endif %}
+
 </body>
 </html>

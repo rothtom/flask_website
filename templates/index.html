@@ -9,7 +9,11 @@
     <div>
         <h1>Welcome</h1>
         <form action="{{ search_url }}" method="post">
-            <input type="text" name="plz" id="plz">
+            <input type="text" name="post_code" id="post_code">
+            <select name="country_code" id="country_code">
+                <option value="" selected disabled hidden>-</option>
+                <option value="de">Germany</option>
+            </select>
             <input type="submit" value="Search">
         </form>
     </div>

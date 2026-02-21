@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background 0.6s ease;
+    color: white;
+}
+
+
+body.clear {
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+}
+
+body.clouds {
+    background: linear-gradient(135deg, #757f9a, #d7dde8);
+}
+
+body.rain {
+    background: linear-gradient(135deg, #314755, #26a0da);
+}
+
+body.drizzle {
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+}
+
+body.thunderstorm {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+body.snow {
+    background: linear-gradient(135deg, #e6dada, #274046);
+}
+
+body.mist,
+body.fog,
+body.haze {
+    background: linear-gradient(135deg, #606c88, #3f4c6b);
+}
+
+body.default {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.country {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.temp {
+    font-size: 3rem;
+    margin: 15px 0;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 100px;
+}
+
+.details {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+.error {
+    color: #ffdddd;
+}
