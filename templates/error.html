@@ -6,6 +6,10 @@
     <title>Error</title>
 </head>
 <body>
-    <h1>Oppps something went wrong...</h1>
+    {% if error_type == "LocationNotFound" %}
+        <h1>Not Found!</h1>
+    {% else %}
+        <h1>Oops something went wrong!</h1>
+    {% endif %}
 </body>
 </html>
