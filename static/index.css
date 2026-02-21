@@ -1,0 +1,63 @@
+/* Default background */
+body.default {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+}
+
+/* Center layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Card styling */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 380px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.subtitle {
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+/* Form styling */
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+select {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #00c6ff;
+    transform: translateY(-2px);
+}

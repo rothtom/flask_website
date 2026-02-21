@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
 </head>
-<body>
-    <div>
-        <h1>Welcome</h1>
-        <form action="{{ search_url }}" method="post">
-            <input type="text" name="post_code" id="post_code">
-            <select name="country_code" id="country_code">
-                <option value="" selected disabled hidden>-</option>
-                <option value="de">Germany</option>
-            </select>
-            <input type="submit" value="Search">
-        </form>
-    </div>
+
+<body class="default">
+
+<div class="card">
+    <h1>Weather Search</h1>
+    <p class="subtitle">Search by postal code</p>
+
+    <form action="{{ search_url }}" method="post" class="search-form">
+        <input type="text" name="post_code" id="post_code" placeholder="Postal Code" required>
+
+        <select name="country_code" id="country_code" required>
+            <option value="" selected disabled hidden>Select Country</option>
+            <option value="de">Germany</option>
+        </select>
+
+        <input type="submit" value="Search" class="btn">
+    </form>
+</div>
+
 </body>
 </html>
