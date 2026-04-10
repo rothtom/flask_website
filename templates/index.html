@@ -14,7 +14,7 @@
     <h1>Weather Search</h1>
     <p class="subtitle">Search by postal code</p>
 
-    <form action="{{ search_url }}" method="post" class="search-form">
+    <form action="{{ search_url }}" method="post" class="search-form" autocomplete="off">
         <input type="text" pattern="\d*" name="post_code" id="post_code" placeholder="Postal Code" required>
         <select name="country_code" id="country_code" required>
             <option value="" selected disabled hidden>Select Country</option>

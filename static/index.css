@@ -1,9 +1,9 @@
-/* Default background */
+
 body.default {
     background: linear-gradient(135deg, #2b5876, #4e4376);
 }
 
-/* Center layout */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -14,7 +14,6 @@ body {
     color: white;
 }
 
-/* Card styling */
 .card {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
@@ -30,7 +29,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Form styling */
 .search-form {
     display: flex;
     flex-direction: column;

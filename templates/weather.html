@@ -51,6 +51,11 @@
                 <p><strong>Sunrise:</strong> {{ current_data.sunrise_time }}</p>
                 <p><strong>Sunset:</strong> {{ current_data.sunset_time }}</p>                
             </div>
+            <div class="back-container">
+                <a href="{{ url_for('index') }}" class="back-btn">
+                    ← Back to Search
+                </a>
+            </div>
         </div>
 
     {% else %}
