@@ -40,7 +40,7 @@
                 <p><strong>Pressure:</strong> {{ current_data.main.pressure }} hPa</p>
                 <p><strong>Wind:</strong> {{ current_data.wind.speed }} m/s</p>
                 <p><strong>Cloudiness:</strong> {{ current_data.clouds.all }}%</p>
-                <!-- Jinja if clause, wird nur dargestellt, wenn tatsächlich auch regnet -->
+                
                 {% if current_data.rain %}
                     <p><strong>Rain (1h):</strong> {{ current_data.rain['1h'] }} mm</p>
                 {% endif %}

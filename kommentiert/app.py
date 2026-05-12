@@ -12,8 +12,8 @@ app = Flask(__name__)
 
 # index seite, bei url "/"
 @app.route("/")
-def index(error=None):
-    return render_template("index.html", search_url=url_for("search_location"), error=error)
+def index():
+    return render_template("index.html", search_url=url_for("search_location"))
 
 # der app.route decorator sorgt daf+r, dass die Funktion bei einer bestimmten url endung ausgeführt wird
 @app.route("/search_location", methods=["POST"])
@@ -30,6 +30,7 @@ def weather(country_code:str, post_code:int):
     # holt die Wetterdaten von der API
     location_response = get_location_data(country_code, post_code)
     if location_response.status_code != 200:
+        # wenn es einen Ort nicht gibt
         return redirect(url_for("error", error_type="LocationNotFound"))
     
     location_data = location_response.json()

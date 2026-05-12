@@ -91,7 +91,7 @@ img {
     margin: 5px 0;
 }
 
-/* falls etwas schief gegangen ist */
+/* falls etwas schief gegangen ist beim holen der Wetterdaten */
 .error {
     color: #ffdddd;
 }
