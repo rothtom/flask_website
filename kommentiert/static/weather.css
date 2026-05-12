@@ -9,7 +9,7 @@ body {
     color: white;
 }
 
-
+/* verschiedene Farben je nach Wetter */
 body.clear {
     background: linear-gradient(135deg, #56ccf2, #2f80ed);
 }
@@ -59,6 +59,7 @@ h1 {
     margin-bottom: 5px;
 }
 
+/* verschiedene Textgrößen */
 .country {
     font-size: 0.9rem;
     opacity: 0.85;
@@ -74,10 +75,12 @@ h1 {
     margin-bottom: 15px;
 }
 
+/* größe des Wetter Icons */
 img {
     width: 100px;
 }
 
+/* Infobox größ0en */
 .details {
     text-align: left;
     margin-top: 15px;
@@ -88,10 +91,12 @@ img {
     margin: 5px 0;
 }
 
+/* falls etwas schief gegangen ist */
 .error {
     color: #ffdddd;
 }
 
+/* zurück Knopf, ähnlich wie Suchen Knopf */
 .back-container {
     margin-top: 25px;
 }
